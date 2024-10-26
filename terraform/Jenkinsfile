@@ -5,11 +5,11 @@ pipeline {
     }
 
     parameters {
-        string(name: 'GITHUB_CREDENTIAL', defaultValue: 'git-creds', description: 'Github access credentials id')
+        string(name: 'GITHUB_CREDENTIAL', defaultValue: 'github_creds', description: 'Jenkins access to Github')
         string(name: 'GITHUB_REPO_URL', defaultValue: 'https://github.com/oadeoyeo/ci-cd-springboot-app-project.git', description: 'Github repository url')
         string(name: 'GITHUB_BRANCH', defaultValue: 'master', description: 'Github branch for your build')
         choice(name: 'TERRAFORM_ACTION', choices: ['', 'apply', 'destroy'], description: 'Select Terraform action: Apply or Destroy')
-        string(name: 'AWS_CREDENTIAL_ID', defaultValue: 'aws-creds', description: 'AWS credentials id')
+        string(name: 'AWS_CREDENTIAL_ID', defaultValue: 'aws_creds', description: 'Jenkins access to AWS')
     }
 
     environment {
