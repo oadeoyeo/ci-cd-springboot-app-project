@@ -2,7 +2,7 @@
   {
     "name": "terraform-pipeline",
     "repo": "https://github.com/oadeoyeo/ci-cd-springboot-app-project.git",
-    "branch": "main",
+    "branch": "master",
     "jenkinsfile": "terraform/Jenkinsfile"
   }  
 ]
