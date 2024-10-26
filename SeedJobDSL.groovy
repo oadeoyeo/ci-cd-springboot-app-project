@@ -11,7 +11,7 @@ projects.each { project ->
     def repoUrl = project.repo
     def branch = project.branch
     def jenkinsfilePath = project.jenkinsfile
-    def credentialsId = 'jenkins_github_creds'
+    def credentialsId = 'git-creds'
 
     // Create pipeline job
     pipelineJob(pipelineName) {
