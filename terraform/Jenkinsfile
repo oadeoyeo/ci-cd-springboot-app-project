@@ -51,13 +51,25 @@ pipeline {
                 }
             }
         }
-
+        stage('Check and Force Unlock State') {
+            steps {
+                script {
+                    def lockID = sh(
+                        script: 'terraform show -json | jq -r .lock_id',
+                        returnStdout: true
+                    ).trim()
+                    if (lockID) {
+                        sh "terraform force-unlock -force ${lockID}"
+                    }
+                }
+            }
+        }
+        
         stage('Terraform Plan') {
             steps {
                 script {
                     dir("${WORKSPACE}/terraform") {
                          withCredentials([aws(credentialsId: "${AWS_CREDENTIAL_ID}", accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                            sh 'terraform force-unlock 00dcddd4-6b0e-116c-c822-9828faeeee8a'
                             sh 'terraform plan'
                         }
                     }
