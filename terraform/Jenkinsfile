@@ -51,20 +51,7 @@ pipeline {
                 }
             }
         }
-        stage('Check and Force Unlock State') {
-            steps {
-                script {
-                    def lockID = sh(
-                        script: 'terraform show -json | jq -r .lock_id',
-                        returnStdout: true
-                    ).trim()
-                    if (lockID) {
-                        sh "terraform force-unlock -force ${lockID}"
-                    }
-                }
-            }
-        }
-        
+       
         stage('Terraform Plan') {
             steps {
                 script {
