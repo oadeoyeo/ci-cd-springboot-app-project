@@ -4,5 +4,11 @@
     "repo": "https://github.com/oadeoyeo/ci-cd-springboot-app-project.git",
     "branch": "master",
     "jenkinsfile": "terraform/Jenkinsfile"
-  }  
+  },
+  {
+    "name": "infrastructure-configuration-pipeline",
+    "repo": "https://github.com/oadeoyeo/ci-cd-springboot-app-project.git",
+    "branch": "master",
+    "jenkinsfile": "ansible/Jenkinsfile"
+  }
 ]
