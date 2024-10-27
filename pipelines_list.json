@@ -10,5 +10,11 @@
     "repo": "https://github.com/oadeoyeo/ci-cd-springboot-app-project.git",
     "branch": "master",
     "jenkinsfile": "ansible/Jenkinsfile"
+  },
+  {
+    "name": "continuous-integration-pipeline",
+    "repo": "https://github.com/oadeoyeo/ci-cd-springboot-app-project.git",
+    "branch": "master",
+    "jenkinsfile": "continuous-integration/Jenkinsfile"
   }
 ]
