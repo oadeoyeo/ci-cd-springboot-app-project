@@ -10,7 +10,7 @@ variable "vpc_id" {
 
 variable "instance_ami" {
   description = "AMI ID for the instances"
-  default     = "ami-0866a3c8686eaeeba"
+  default     = "ami-0ddc798b3f1a5117e"
 }
 
 variable "instance_key_name" {
