@@ -20,7 +20,7 @@ variable "instance_key_name" {
 
 variable "instance_subnet_id" {
   description = "Public Subnet ID for the instances"
-  default     = "sg-09e633001841b87a3"
+  default     = "subnet-0dbf5495aae222ff1"
 }
 
 variable "instance_type" {
