@@ -22,5 +22,17 @@
     "repo": "https://github.com/oadeoyeo/ci-cd-springboot-app-project.git",
     "branch": "master",
     "jenkinsfile": "continuous-integration-continuous-delivery/Jenkinsfile"
+  },
+  {
+    "name": "continuous-deployment-pipeline",
+    "repo": "https://github.com/oadeoyeo/ci-cd-springboot-app-project.git",
+    "branch": "main",
+    "jenkinsfile": "continuous-deployment/Jenkinsfile"
+  },
+  {
+    "name": "continuous-integration-continuous-deployment-pipeline",
+    "repo": "https://github.com/oadeoyeo/ci-cd-springboot-app-project.git",
+    "branch": "main",
+    "jenkinsfile": "continuous-integration-continuous-deployment/Jenkinsfile"
   }
 ]
